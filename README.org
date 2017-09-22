@@ -22,12 +22,12 @@ $ mix phx.server
 $ open http://localhost:4000/igraphql
 #+END_EXAMPLE
 
-** TODO Implementation [0/8]
-   - [ ] Add initial umbrella app
-   - [ ] Add initial fumepedia app
-   - [ ] Add initial graphql api app supporting queries
-   - [ ] Extend api app to support mutations
-   - [ ] Add initial user app to supporting user auth
+** TODO Implementation [1/8]
+   - [X] Add umbrella app
+   - [ ] Add fumepedia app providing ecto repo and schemas
+   - [ ] Add api app supporting graphql queries
+   - [ ] Extend api app to support graphql mutations
+   - [ ] Add user app to supporting user authentication/authorization
    - [ ] Extend api app to support login and authorization checks
    - [ ] Add docker deployment
    - [ ] Add admin app for backoffice use
