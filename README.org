@@ -19,15 +19,15 @@ $ mix deps.get
 $ mix initdb
 $ mix test
 $ mix phx.server
-$ open http://localhost:4000/igraphql
+$ open http://localhost:4000/graphiql
 #+END_EXAMPLE
 
-** TODO Implementation [1/8]
+** TODO Implementation [2/8]
    - [X] Add umbrella app
-   - [ ] Add fumepedia app providing ecto repo and schemas
-   - [ ] Add api app supporting graphql queries
-   - [ ] Extend api app to support graphql mutations
+   - [X] Add fumepedia app providing ecto repo and schemas
+   - [ ] Add web app supporting graphql queries
+   - [ ] Extend web app to support graphql mutations
    - [ ] Add user app to supporting user authentication/authorization
-   - [ ] Extend api app to support login and authorization checks
+   - [ ] Extend web app to support login and authorization checks
    - [ ] Add docker deployment
    - [ ] Add admin app for backoffice use
