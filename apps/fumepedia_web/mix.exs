@@ -1,9 +1,9 @@
-defmodule Fumepedia.Mixfile do
+defmodule FumepediaWeb.Mixfile do
   use Mix.Project
 
   def project do
     [
-      app: :fumepedia,
+      app: :fumepedia_web,
       version: "0.0.1",
       elixir: "~> 1.4",
       elixirc_paths: elixirc_paths(Mix.env),
@@ -16,8 +16,8 @@ defmodule Fumepedia.Mixfile do
 
   def application do
     [
-      mod: {Fumepedia.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      mod: {FumepediaWeb.Application, []},
+      extra_applications: [:logger, :runtime_tools, ]
     ]
   end
 
@@ -36,22 +36,16 @@ defmodule Fumepedia.Mixfile do
       {:poison, "~> 3.0", override: true},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:absinthe, "~> 1.4.0-beta or ~> 1.4.0-rc or ~> 1.4.0",
-       override: true},
-      {:absinthe_plug, "~> 1.4.0-beta or ~> 1.4.0-rc or ~> 1.4.0",
-       override: true},
-      {:absinthe_phoenix, "~> 1.4.0-beta or ~> 1.4.0-rc or ~> 1.4.0",
-       override: true},
-      {:absinthe_relay, "~> 1.4.0-beta or ~> 1.4.0-rc or ~> 1.4.0 or ~> 1.3.0",
-       override: true},
+      {:absinthe, "~> 1.4.0-beta or ~> 1.4.0-rc or ~> 1.4.0", override: true},
+      {:absinthe_plug, "~> 1.4.0-beta or ~> 1.4.0-rc or ~> 1.4.0", override: true},
+      {:absinthe_phoenix, "~> 1.4.0-beta or ~> 1.4.0-rc or ~> 1.4.0", override: true},
+      {:absinthe_relay, "~> 1.4.0-beta or ~> 1.4.0-rc or ~> 1.4.0 or ~> 1.3.0", override: true},
+      {:fumepedia, in_umbrella: true},
     ]
   end
 
   defp aliases do
     [
-      "initdb": ["ecto.drop", "ecto.create", "ecto.migrate",
-                 "run priv/repo/seeds.exs"],
-      "test": ["ecto.create --quiet", "ecto.migrate", "test"]
     ]
   end
 

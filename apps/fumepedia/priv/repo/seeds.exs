@@ -57,6 +57,7 @@ my_father =
   %Brand{name: "My Father Cigars",
          description: "My Father Cigars description.",
          country: nicaragua}
+  |> Repo.insert!
 
 # Lines
 
@@ -64,6 +65,7 @@ don_carlos =
   %Line{name: "Don Carlos",
         description: "Don Carlos description.",
         brand: arturo_fuente}
+  |> Repo.insert!
 
 # Vitolas
 
@@ -73,6 +75,7 @@ dc_belicoso =
           length: 5.25,
           gauge: 50,
           line: don_carlos}
+  |> Repo.insert!
 
 dc_number3 =
   %Vitola{name: "No. 3",
@@ -80,3 +83,4 @@ dc_number3 =
           length: 5.5,
           gauge: 44,
           line: don_carlos}
+  |> Repo.insert!
