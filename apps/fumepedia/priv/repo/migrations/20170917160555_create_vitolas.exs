@@ -8,7 +8,7 @@ defmodule Fumepedia.Repo.Migrations.CreateVitolas do
       add :description, :string
       add :shape, :string
       add :length, :decimal
-      add :guage, :integer
+      add :gauge, :integer
       timestamps()
     end
   end
