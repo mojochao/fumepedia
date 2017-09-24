@@ -19,7 +19,7 @@ $ mix deps.get
 $ mix initdb
 $ mix test
 $ mix phx.server
-$ open http://localhost:4000/graphiql
+# open http://localhost:4000/graphiql in browser
 #+END_EXAMPLE
 
 ** TODO Implementation [2/8]
@@ -27,7 +27,7 @@ $ open http://localhost:4000/graphiql
    - [X] Add fumepedia app providing ecto repo and schemas
    - [ ] Add web app supporting graphql queries
    - [ ] Extend web app to support graphql mutations
-   - [ ] Add user app to supporting user authentication/authorization
+   - [ ] Add user app supporting user authentication/authorization
    - [ ] Extend web app to support login and authorization checks
    - [ ] Add docker deployment
    - [ ] Add admin app for backoffice use
