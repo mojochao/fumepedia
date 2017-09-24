@@ -8,7 +8,7 @@ defmodule Fumepedia.Cigar.Line do
   schema "lines" do
     field :added_on, :date
     field :name, :string
-    field :description, :string
+    field :body, :string
     belongs_to :brand, Brand
     has_many :vitolas, Vitola
     timestamps()
@@ -20,7 +20,7 @@ defmodule Fumepedia.Cigar.Line do
     |> cast(attrs, [
         :added_on,
         :name,
-        :description
+        :body
       ])
     |> cast_assoc(:brand)
     |> cast_assoc(:vitolas)

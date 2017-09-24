@@ -3,13 +3,12 @@ defmodule Fumepedia.Cigar.Brand do
 
   use Ecto.Schema
   import Ecto.Changeset
-  alias Fumepedia.Cigar.{Brand, Country, Line}
+  alias Fumepedia.Cigar.{Brand, Line}
 
   schema "brands" do
     field :added_on, :date
     field :name, :string
-    field :description, :string
-    belongs_to :country, Country
+    field :body, :string
     has_many :lines, Line
     timestamps()
   end
@@ -20,9 +19,8 @@ defmodule Fumepedia.Cigar.Brand do
     |> cast(attrs, [
         :added_on,
         :name,
-        :description,
+        :body,
       ])
-    |> cast_assoc(:country)
     |> cast_assoc(:lines)
     |> validate_required([
         :name

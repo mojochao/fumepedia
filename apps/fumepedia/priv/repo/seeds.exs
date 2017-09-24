@@ -11,59 +11,30 @@
 # will fail if something goes wrong.
 
 alias Fumepedia.Repo
-alias Fumepedia.Cigar.{Brand, Country, Line, Vitola}
-
-# Countries
-
-usa =
-  %Country{name: "United States of America",
-           description: "United States of America description."}
-
-cuba =
-  %Country{name: "Cuba",
-           description: "Cuba description."}
-  |> Repo.insert!
-
-honduras =
-  %Country{name: "Honduras",
-           description: "Honduras description."}
-  |> Repo.insert!
-
-dominican_republic =
-  %Country{name: "Dominican Republic",
-           description: "Dominican Republic description."}
-  |> Repo.insert!
-
-nicaragua =
-  %Country{name: "Nicaragua",
-           description: "Nicaragua description."}
-  |> Repo.insert!
+alias Fumepedia.Cigar.{Brand, Line, Vitola}
 
 # Brands
 
 arturo_fuente =
   %Brand{name: "Arturo Fuente",
-         description: "Arturo Fuente description.",
-         country: dominican_republic}
+         body: "Arturo Fuente body."}
   |> Repo.insert!
 
 drew_estates =
   %Brand{name: "Drew Estates",
-         description: "Drew Estates description.",
-         country: usa}
+         body: "Drew Estates body."}
   |> Repo.insert!
 
 my_father =
   %Brand{name: "My Father Cigars",
-         description: "My Father Cigars description.",
-         country: nicaragua}
+         body: "My Father Cigars body."}
   |> Repo.insert!
 
 # Lines
 
 don_carlos =
   %Line{name: "Don Carlos",
-        description: "Don Carlos description.",
+        body: "Don Carlos body.",
         brand: arturo_fuente}
   |> Repo.insert!
 

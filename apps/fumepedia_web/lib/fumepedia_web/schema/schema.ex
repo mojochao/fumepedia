@@ -5,7 +5,6 @@ defmodule FumepediaWeb.Schema do
 
   alias FumepediaWeb.Resolvers.{
     BrandResolver,
-    CountryResolver,
     LineResolver,
     VitolaResolver,
   }
@@ -25,19 +24,6 @@ defmodule FumepediaWeb.Schema do
     @desc "Get a list of all brands."
     field :brands, list_of(:brand) do
       resolve &BrandResolver.all/2
-    end
-
-    # Countries
-
-    @desc "Get a country by id."
-    field :country, type: :country do
-      arg :id, non_null(:id)
-      resolve &CountryResolver.find/2
-    end
-
-    @desc "Get a list of all countries."
-    field :countries, list_of(:country) do
-      resolve &CountryResolver.all/2
     end
 
     # Lines
