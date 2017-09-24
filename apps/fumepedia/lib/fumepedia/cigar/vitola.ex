@@ -8,7 +8,7 @@ defmodule Fumepedia.Cigar.Vitola do
   schema "vitolas" do
     field :added_on, :date
     field :name, :string
-    field :description, :string
+    field :body, :string
     field :shape, :string
     field :length, :decimal
     field :gauge, :integer
@@ -22,7 +22,7 @@ defmodule Fumepedia.Cigar.Vitola do
     |> cast(attrs, [
         :added_on,
         :name,
-        :description,
+        :body,
         :shape,
         :length,
         :gauge,
