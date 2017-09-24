@@ -14,18 +14,7 @@ defmodule FumepediaWeb.Schema do
 
   query do
 
-    @desc "Get a country by id."
-    field :country, type: :country do
-      arg :id, non_null(:id)
-      resolve &CountryResolver.find/2
-    end
-
-    @desc "Get a list of all countries."
-    field :countries, list_of(:country) do
-      resolve fn _, _, _ ->
-        {:ok, &CountryResolver.all/2}
-      end
-    end
+    # Brands
 
     @desc "Get a brand by id."
     field :brand, type: :brand do
@@ -35,10 +24,23 @@ defmodule FumepediaWeb.Schema do
 
     @desc "Get a list of all brands."
     field :brands, list_of(:brand) do
-      resolve fn _, _, _ ->
-        {:ok, &BrandResolver.all/2}
-      end
+      resolve &BrandResolver.all/2
     end
+
+    # Countries
+
+    @desc "Get a country by id."
+    field :country, type: :country do
+      arg :id, non_null(:id)
+      resolve &CountryResolver.find/2
+    end
+
+    @desc "Get a list of all countries."
+    field :countries, list_of(:country) do
+      resolve &CountryResolver.all/2
+    end
+
+    # Lines
 
     @desc "Get a line by id."
     field :line, type: :line do
@@ -48,10 +50,10 @@ defmodule FumepediaWeb.Schema do
 
     @desc "Get a list of all lines."
     field :lines, list_of(:line) do
-      resolve fn _, _, _ ->
-        {:ok, &LineResolver.all/2}
-      end
+      resolve &LineResolver.all/2
     end
+
+    # Vitolas
 
     @desc "Get a vitola by id."
     field :vitola, type: :vitola do
@@ -61,9 +63,7 @@ defmodule FumepediaWeb.Schema do
 
     @desc "Get a list of all vitolas."
     field :vitolas, list_of(:vitola) do
-      resolve fn _, _, _ ->
-        {:ok, &VitolaResolver.all/2}
-      end
+      resolve &VitolaResolver.all/2
     end
 
   end
