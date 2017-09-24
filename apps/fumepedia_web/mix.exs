@@ -28,6 +28,7 @@ defmodule FumepediaWeb.Mixfile do
     [
       {:credo, "~> 0.8", only: [:dev, :test]},
       {:dogma, "~> 0.1.15"},
+      {:distillery, "~> 1.5"},
       {:phoenix, "~> 1.3.0"},
       {:phoenix_pubsub, "~> 1.0"},
       {:phoenix_ecto, "~> 3.2"},
