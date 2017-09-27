@@ -3,6 +3,16 @@ defmodule FumepediaWeb.Schema.CigarTypes do
 
   use Absinthe.Schema.Notation
 
+  scalar :decimal do
+    parse fn
+      %{value: value}, _ ->
+        Decimal.parse(value)
+      _, _ -> :error
+    end
+
+    serialize &to_string/1
+  end
+
   object :brand do
     field :id, :id
     field :name, :string
@@ -23,7 +33,7 @@ defmodule FumepediaWeb.Schema.CigarTypes do
     field :name, :string
     field :body, :string
     field :shape, :string
-    field :length, :string
+    field :length, :decimal
     field :gauge, :integer
     field :line, :line
   end
