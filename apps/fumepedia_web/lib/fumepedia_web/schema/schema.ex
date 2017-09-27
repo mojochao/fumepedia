@@ -9,8 +9,8 @@ defmodule FumepediaWeb.Schema do
     VitolaResolver,
   }
 
-  import_types FumepediaWeb.Schema.AccountsTypes
-  import_types FumepediaWeb.Schema.CigarTypes
+  import_types __MODULE__.AccountsTypes
+  import_types __MODULE__.CigarTypes
 
   query do
 

@@ -5,8 +5,8 @@ defmodule Fumepedia.Accounts do
 
   import Ecto.Query, warn: false
   alias Comeonin.Ecto.Password
-  alias Fumepedia.Accounts.User
   alias Fumepedia.Repo
+  alias __MODULE__.User
 
   def authenticate(role, email, password) do
     user = Repo.get_by(User, role: role, email: email)

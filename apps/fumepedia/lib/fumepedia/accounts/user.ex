@@ -3,7 +3,7 @@ defmodule Fumepedia.Accounts.User do
 
   use Ecto.Schema
   import Ecto.Changeset
-  alias Fumepedia.Accounts.User
+  alias __MODULE__
 
   schema "users" do
     field :email, :string
