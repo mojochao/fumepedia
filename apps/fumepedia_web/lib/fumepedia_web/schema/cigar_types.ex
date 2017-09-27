@@ -1,4 +1,4 @@
-defmodule FumepediaWeb.Schema.Types do
+defmodule FumepediaWeb.Schema.CigarTypes do
   @moduledoc false
 
   use Absinthe.Schema.Notation
