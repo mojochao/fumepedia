@@ -15,8 +15,6 @@ defmodule FumepediaWeb.Schema do
 
   query do
 
-    # Brands
-
     @desc "Get a brand by id."
     field :brand, type: :brand do
       arg :id, non_null(:id)
@@ -28,8 +26,6 @@ defmodule FumepediaWeb.Schema do
       resolve &BrandResolver.all/2
     end
 
-    # Lines
-
     @desc "Get a line by id."
     field :line, type: :line do
       arg :id, non_null(:id)
@@ -40,8 +36,6 @@ defmodule FumepediaWeb.Schema do
     field :lines, list_of(:line) do
       resolve &LineResolver.all/2
     end
-
-    # Vitolas
 
     @desc "Get a vitola by id."
     field :vitola, type: :vitola do
@@ -57,8 +51,6 @@ defmodule FumepediaWeb.Schema do
   end
 
   mutation do
-
-    # Login
 
     field :login_employee, :employee_session do
       arg :email, non_null(:string)
