@@ -4,6 +4,7 @@ defmodule FumepediaWeb.Schema do
   use Absinthe.Schema
 
   alias FumepediaWeb.Resolvers.{
+    Accounts,
     BrandResolver,
     LineResolver,
     VitolaResolver,
@@ -51,6 +52,18 @@ defmodule FumepediaWeb.Schema do
     @desc "Get a list of all vitolas."
     field :vitolas, list_of(:vitola) do
       resolve &VitolaResolver.all/2
+    end
+
+  end
+
+  mutation do
+
+    # Login
+
+    field :login_employee, :employee_session do
+      arg :email, non_null(:string)
+      arg :password, non_null(:string)
+      resolve &Accounts.login_employee/3
     end
 
   end
