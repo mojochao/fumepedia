@@ -1,4 +1,6 @@
 defmodule FumepediaWeb.Router do
+  @moduledoc false
+
   use FumepediaWeb, :router
 
   pipeline :api do
@@ -12,8 +14,7 @@ defmodule FumepediaWeb.Router do
       schema: FumepediaWeb.Schema
 
     forward "/graphiql", Absinthe.Plug.GraphiQL,
-      schema: FumepediaWeb.Schema,
-      interface: :simple
+      schema: FumepediaWeb.Schema
   end
 
 end

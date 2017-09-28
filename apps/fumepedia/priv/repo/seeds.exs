@@ -11,6 +11,7 @@
 # will fail if something goes wrong.
 
 alias Fumepedia.Repo
+alias Fumepedia.Accounts.User
 alias Fumepedia.Cigar.{Brand, Line, Vitola}
 
 # Brands
