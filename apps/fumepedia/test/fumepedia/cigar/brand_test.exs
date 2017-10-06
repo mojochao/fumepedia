@@ -8,13 +8,14 @@ defmodule Fumepedia.Cigar.BrandTest do
   end
 
   test "changeset is valid if name is present" do
-    changeset = Brand.changeset(%Brand{}, %{name: "Drew Estate"})
+    changeset = Brand.changeset(%Brand{}, %{name: "name"})
     assert changeset.valid?
   end
 
   test "changeset is valid if all fields are present" do
-    attrs = %{name: "Drew Estate", body: "body", image: "image"}
+    attrs = %{name: "name", body: "body", image: "image"}
     changeset = Brand.changeset(%Brand{}, attrs)
     assert changeset.valid?
   end
+
 end
