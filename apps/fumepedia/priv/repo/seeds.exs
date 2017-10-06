@@ -17,6 +17,8 @@ alias Fumepedia.Cigar.{Brand, Line, Vitola}
 # Brands
 
 arturo_fuente_image = "https://upload.wikimedia.org/wikipedia/en/4/4f/Logo_Arturo_Fuente.jpg"
+drew_estate_image = "https://img.cigarsinternational.com/content/brand/logo/drewestate.png"
+my_father_image = "http://myfathercigars.com/images/mflogo-sm.png"
 
 arturo_fuente =
   %Brand{name: "Arturo Fuente",
@@ -24,14 +26,16 @@ arturo_fuente =
          image: arturo_fuente_image}
   |> Repo.insert!
 
-drew_estates =
-  %Brand{name: "Drew Estates",
-         body: "Drew Estates body."}
+drew_estate =
+  %Brand{name: "Drew Estate",
+         body: "Drew Estate body.",
+         image: drew_estate_image}
   |> Repo.insert!
 
 my_father =
   %Brand{name: "My Father Cigars",
-         body: "My Father Cigars body."}
+         body: "My Father Cigars body.",
+         image: my_father_image}
   |> Repo.insert!
 
 # Lines
