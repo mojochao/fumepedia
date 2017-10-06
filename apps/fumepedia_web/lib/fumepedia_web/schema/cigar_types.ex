@@ -17,6 +17,7 @@ defmodule FumepediaWeb.Schema.CigarTypes do
     field :id, :id
     field :name, :string
     field :body, :string
+    field :image, :string
     field :lines, list_of(:line)
   end
 
@@ -24,6 +25,7 @@ defmodule FumepediaWeb.Schema.CigarTypes do
     field :id, :id
     field :name, :string
     field :body, :string
+    field :image, :string
     field :brand, :brand
     field :vitolas, list_of(:vitola)
   end
@@ -32,6 +34,7 @@ defmodule FumepediaWeb.Schema.CigarTypes do
     field :id, :id
     field :name, :string
     field :body, :string
+    field :image, :string
     field :shape, :string
     field :length, :decimal
     field :gauge, :integer
