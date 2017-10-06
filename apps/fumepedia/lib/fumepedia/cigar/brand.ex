@@ -9,6 +9,7 @@ defmodule Fumepedia.Cigar.Brand do
     field :added_on, :date
     field :name, :string
     field :body, :string
+    field :image, :string
     has_many :lines, Line
     timestamps()
   end
@@ -20,6 +21,7 @@ defmodule Fumepedia.Cigar.Brand do
         :added_on,
         :name,
         :body,
+        :image,
       ])
     |> cast_assoc(:lines)
     |> validate_required([

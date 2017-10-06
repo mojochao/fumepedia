@@ -16,9 +16,12 @@ alias Fumepedia.Cigar.{Brand, Line, Vitola}
 
 # Brands
 
+arturo_fuente_image = "https://upload.wikimedia.org/wikipedia/en/4/4f/Logo_Arturo_Fuente.jpg"
+
 arturo_fuente =
   %Brand{name: "Arturo Fuente",
-         body: "Arturo Fuente body."}
+         body: "Arturo Fuente body.",
+         image: arturo_fuente_image}
   |> Repo.insert!
 
 drew_estates =
