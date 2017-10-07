@@ -16,7 +16,7 @@ defmodule FumepediaWeb.Schema.Query.CigarBrandsTest do
     conn = get(build_conn(), "/api", query: @query)
     assert json_response(conn, 200) == %{"data" => %{"brands" => [
       %{"name" => "Arturo Fuente"},
-      %{"name" => "Drew Estates"},
+      %{"name" => "Drew Estate"},
       %{"name" => "My Father Cigars"}
     ]}}
   end
