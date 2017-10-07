@@ -11,7 +11,6 @@
 # will fail if something goes wrong.
 
 alias Fumepedia.Repo
-alias Fumepedia.Accounts.User
 alias Fumepedia.Cigar.{Brand, Line, Vitola}
 
 # Brands
@@ -26,17 +25,15 @@ arturo_fuente =
          image: arturo_fuente_image}
   |> Repo.insert!
 
-drew_estate =
-  %Brand{name: "Drew Estate",
-         body: "Drew Estate body.",
-         image: drew_estate_image}
-  |> Repo.insert!
+%Brand{name: "Drew Estate",
+       body: "Drew Estate body.",
+       image: drew_estate_image}
+|> Repo.insert!
 
-my_father =
-  %Brand{name: "My Father Cigars",
-         body: "My Father Cigars body.",
-         image: my_father_image}
-  |> Repo.insert!
+%Brand{name: "My Father Cigars",
+       body: "My Father Cigars body.",
+       image: my_father_image}
+|> Repo.insert!
 
 # Lines
 
@@ -48,18 +45,16 @@ don_carlos =
 
 # Vitolas
 
-dc_belicoso =
-  %Vitola{name: "Belicoso",
-          shape: "belicoso",
-          length: 5.25,
-          gauge: 50,
-          line: don_carlos}
-  |> Repo.insert!
+%Vitola{name: "Belicoso",
+        shape: "belicoso",
+        length: 5.25,
+        gauge: 50,
+        line: don_carlos}
+|> Repo.insert!
 
-dc_number3 =
-  %Vitola{name: "No. 3",
-          shape: "parejo",
-          length: 5.5,
-          gauge: 44,
-          line: don_carlos}
-  |> Repo.insert!
+%Vitola{name: "No. 3",
+        shape: "parejo",
+        length: 5.5,
+        gauge: 44,
+        line: don_carlos}
+|> Repo.insert!
