@@ -8,15 +8,15 @@ defmodule FumepediaWeb.Schema.Mutation.LoginEmployeeTest do
   setup do
     user =
       %User{}
-      |> User.changeset(%{role: "employee", name: "Bob",
-                          email: "bob@fumepedia.com", password: "s3kr3t!"})
+      |> User.changeset(%{role: "employee", name: "Test",
+                          email: "test@fumepedia.int", password: "s3kr3t!"})
       |> Repo.insert!
     {:ok, user: user}
   end
 
   @query """
   mutation {
-    loginEmployee(email: "bob@fumepedia.com",password: "s3kr3t!") {
+    loginEmployee(email: "test@fumepedia.int",password: "s3kr3t!") {
       token
       employee {
         name

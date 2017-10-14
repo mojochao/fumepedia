@@ -5,6 +5,7 @@ defmodule FumepediaWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+    plug FumepediaWeb.Context
   end
 
   scope "/" do

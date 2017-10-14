@@ -1,5 +1,7 @@
 defmodule FumepediaWeb.Resolvers.Accounts do
-  @moduledoc false
+  @moduledoc """
+  Accounts context resolvers.
+  """
 
   alias Fumepedia.Accounts
   alias FumepediaWeb.Authentication

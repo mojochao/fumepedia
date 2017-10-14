@@ -4,6 +4,7 @@ defmodule Fumepedia.Accounts do
   """
 
   import Ecto.Query, warn: false
+
   alias Comeonin.Ecto.Password
   alias Fumepedia.Repo
   alias __MODULE__.User
@@ -16,6 +17,10 @@ defmodule Fumepedia.Accounts do
     else
       _ -> :error
     end
+  end
+
+  def lookup(role, id) do
+    Repo.get_by(User, role: role, id: id)
   end
 
 end
