@@ -24,5 +24,4 @@ defmodule FumepediaWeb.Schema.Query.SearchTest do
   #   assert Enum.find(results, &(&1["__typename"] == "MenuItem"))
   #   assert Enum.all?(results, &(&1["name"]))
   # end
-
 end

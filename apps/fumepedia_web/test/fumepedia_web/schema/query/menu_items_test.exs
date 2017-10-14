@@ -1,5 +1,4 @@
 defmodule FumepediaWeb.Schema.Query.MenuItemsTest do
-  
   # setup do
   #   Code.load_file("../fumepedia/priv/repo/seeds.exs")
   # end
@@ -96,7 +95,6 @@ defmodule FumepediaWeb.Schema.Query.MenuItemsTest do
   #   response = get(build_conn(), "/api", query: @query, variables: @variables)
   #   assert %{"errors" => _} = json_response(response, 400) 
   # end
-
 
   # @query """
   # {
@@ -250,5 +248,4 @@ defmodule FumepediaWeb.Schema.Query.MenuItemsTest do
 
   #   assert "Argument \"filter\" has invalid value $filter.\nIn field \"addedBefore\": Expected type \"Date\", found 123." == message
   # end
-
 end

@@ -5,8 +5,9 @@ defmodule FumepediaWeb.Application do
     import Supervisor.Spec
 
     children = [
-      supervisor(FumepediaWeb.Endpoint, []),
+      supervisor(FumepediaWeb.Endpoint, [])
     ]
+
     opts = [strategy: :one_for_one, name: FumepediaWeb.Supervisor]
     Supervisor.start_link(children, opts)
   end
@@ -15,5 +16,4 @@ defmodule FumepediaWeb.Application do
     FumepediaWeb.Endpoint.config_change(changed, removed)
     :ok
   end
-
 end

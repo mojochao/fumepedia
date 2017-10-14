@@ -20,5 +20,4 @@ defmodule FumepediaWeb.Schema.Middleware.ChangesetErrors do
       String.replace(acc, "%{#{key}}", to_string(value))
     end)
   end
-
 end

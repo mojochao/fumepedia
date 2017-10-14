@@ -14,9 +14,13 @@ defmodule FumepediaWeb.Schema.Query.CigarLinesTest do
   """
   test "line field returns cigar lines" do
     conn = get(build_conn(), "/api", query: @query)
-    assert json_response(conn, 200) == %{"data" => %{"lines" => [
-      %{"name" => "Don Carlos"},
-    ]}}
-  end
 
+    assert json_response(conn, 200) == %{
+             "data" => %{
+               "lines" => [
+                 %{"name" => "Don Carlos"}
+               ]
+             }
+           }
+  end
 end

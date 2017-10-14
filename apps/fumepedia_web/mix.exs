@@ -6,9 +6,9 @@ defmodule FumepediaWeb.Mixfile do
       app: :fumepedia_web,
       version: "0.0.1",
       elixir: "~> 1.4",
-      elixirc_paths: elixirc_paths(Mix.env),
-      compilers: [:phoenix, :gettext] ++ Mix.compilers,
-      start_permanent: Mix.env == :prod,
+      elixirc_paths: elixirc_paths(Mix.env()),
+      compilers: [:phoenix, :gettext] ++ Mix.compilers(),
+      start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps()
     ]
@@ -17,12 +17,12 @@ defmodule FumepediaWeb.Mixfile do
   def application do
     [
       mod: {FumepediaWeb.Application, []},
-      extra_applications: [:logger, :runtime_tools, ]
+      extra_applications: [:logger, :runtime_tools]
     ]
   end
 
   defp elixirc_paths(:test), do: ["lib", "test/support"]
-  defp elixirc_paths(_),     do: ["lib"]
+  defp elixirc_paths(_), do: ["lib"]
 
   defp deps do
     [
@@ -40,13 +40,11 @@ defmodule FumepediaWeb.Mixfile do
       {:absinthe_plug, "~> 1.4.0-beta or ~> 1.4.0-rc or ~> 1.4.0", override: true},
       {:absinthe_phoenix, "~> 1.4.0-beta or ~> 1.4.0-rc or ~> 1.4.0", override: true},
       {:absinthe_relay, "~> 1.4.0-beta or ~> 1.4.0-rc or ~> 1.4.0 or ~> 1.3.0", override: true},
-      {:fumepedia, in_umbrella: true},
+      {:fumepedia, in_umbrella: true}
     ]
   end
 
   defp aliases do
-    [
-    ]
+    []
   end
-
 end

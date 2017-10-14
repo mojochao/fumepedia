@@ -6,10 +6,10 @@ defmodule Fumepedia.Accounts.User do
   alias __MODULE__
 
   schema "users" do
-    field :email, :string
-    field :name, :string
-    field :password, Comeonin.Ecto.Password
-    field :role, :string
+    field(:email, :string)
+    field(:name, :string)
+    field(:password, Comeonin.Ecto.Password)
+    field(:role, :string)
     timestamps()
   end
 
@@ -19,5 +19,4 @@ defmodule Fumepedia.Accounts.User do
     |> cast(attrs, [:name, :email, :password, :role])
     |> validate_required([:name, :email, :password, :role])
   end
-
 end

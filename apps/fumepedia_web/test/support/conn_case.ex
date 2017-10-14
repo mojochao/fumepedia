@@ -29,16 +29,18 @@ defmodule FumepediaWeb.ConnCase do
   def auth_user(conn, user) do
     # hack so that xref errors don't happen on branches without this module
     token = apply(FumepediaWeb.Authentication, :sign, [%{role: user.role, id: user.id}])
+
     conn
     |> Plug.Conn.put_req_header("Authorization", "Bearer #{token}")
   end
 
   setup tags do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Fumepedia.Repo)
+
     unless tags[:async] do
       Ecto.Adapters.SQL.Sandbox.mode(Fumepedia.Repo, {:shared, self()})
     end
+
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
-
 end

@@ -23,14 +23,13 @@ defmodule FumepediaWeb.Context do
     with ["Bearer " <> token] <- get_req_header(conn, "authorization"),
          {:ok, data} <- Authentication.verify(token),
          %{} = user <- get_user(data) do
-           %{current_user: user}
-         end
-    else
-      _ -> %{}
+      %{current_user: user}
+    end
+  else
+    _ -> %{}
   end
 
   defp get_user(%{id: id, role: role}) do
     Accounts.lookup(role, id)
   end
-
 end

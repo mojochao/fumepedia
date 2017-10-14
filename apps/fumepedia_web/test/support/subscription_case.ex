@@ -10,8 +10,7 @@ defmodule FumepediaWeb.SubscriptionCase do
     quote do
       # Import conveniences for testing with channels
       use FumepediaWeb.ChannelCase
-      use Absinthe.Phoenix.SubscriptionTest,
-        schema: FumepediaWeb.Schema
+      use Absinthe.Phoenix.SubscriptionTest, schema: FumepediaWeb.Schema
 
       setup do
         Code.load_file("priv/repo/seeds.exs")

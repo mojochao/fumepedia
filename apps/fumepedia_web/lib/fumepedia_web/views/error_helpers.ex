@@ -26,5 +26,4 @@ defmodule FumepediaWeb.ErrorHelpers do
       Gettext.dgettext(FumepediaWeb.Gettext, "errors", msg, opts)
     end
   end
-
 end

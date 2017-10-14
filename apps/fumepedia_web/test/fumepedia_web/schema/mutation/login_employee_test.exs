@@ -8,9 +8,14 @@ defmodule FumepediaWeb.Schema.Mutation.LoginEmployeeTest do
   setup do
     user =
       %User{}
-      |> User.changeset(%{role: "employee", name: "Test",
-                          email: "test@fumepedia.int", password: "s3kr3t!"})
-      |> Repo.insert!
+      |> User.changeset(%{
+           role: "employee",
+           name: "Test",
+           email: "test@fumepedia.int",
+           password: "s3kr3t!"
+         })
+      |> Repo.insert!()
+
     {:ok, user: user}
   end
 
@@ -30,5 +35,4 @@ defmodule FumepediaWeb.Schema.Mutation.LoginEmployeeTest do
     assert %{"data" => %{"loginEmployee" => %{"token" => token}}} = json_response(response, 200)
     assert {:ok, %{type: "employee", id: user.id}} == Authentication.verify(token)
   end
-
 end

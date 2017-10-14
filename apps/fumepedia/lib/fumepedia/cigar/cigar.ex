@@ -299,5 +299,4 @@ defmodule Fumepedia.Cigar do
   def change_vitola(%Vitola{} = vitola) do
     Vitola.changeset(vitola, %{})
   end
-
 end

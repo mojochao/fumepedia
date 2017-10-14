@@ -17,5 +17,4 @@ defmodule Fumepedia.Cigar.LineTest do
     changeset = Line.changeset(%Line{}, attrs)
     assert changeset.valid?
   end
-
 end

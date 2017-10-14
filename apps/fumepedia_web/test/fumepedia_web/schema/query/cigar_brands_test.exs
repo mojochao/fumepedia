@@ -14,11 +14,15 @@ defmodule FumepediaWeb.Schema.Query.CigarBrandsTest do
   """
   test "brands field returns cigar brands" do
     conn = get(build_conn(), "/api", query: @query)
-    assert json_response(conn, 200) == %{"data" => %{"brands" => [
-      %{"name" => "Arturo Fuente"},
-      %{"name" => "Drew Estate"},
-      %{"name" => "My Father Cigars"}
-    ]}}
-  end
 
+    assert json_response(conn, 200) == %{
+             "data" => %{
+               "brands" => [
+                 %{"name" => "Arturo Fuente"},
+                 %{"name" => "Drew Estate"},
+                 %{"name" => "My Father Cigars"}
+               ]
+             }
+           }
+  end
 end
