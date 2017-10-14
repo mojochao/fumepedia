@@ -11,6 +11,7 @@
 # will fail if something goes wrong.
 
 alias Fumepedia.Repo
+alias Fumepedia.Accounts.User
 alias Fumepedia.Cigar.{Brand, Line, Vitola}
 
 # Brands
@@ -57,4 +58,18 @@ don_carlos =
         length: 5.5,
         gauge: 44,
         line: don_carlos}
+|> Repo.insert!
+
+# Users
+
+%User{email: "alice@fumepedia.int",
+      name: "alice",
+      password: "password",
+      role: "admin"}
+|> Repo.insert!
+
+%User{email: "bob@fumepedia.int",
+      name: "bob",
+      password: "password",
+      role: "user"}
 |> Repo.insert!
