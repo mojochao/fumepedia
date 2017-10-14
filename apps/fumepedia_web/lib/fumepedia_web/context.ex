@@ -1,6 +1,14 @@
 defmodule FumepediaWeb.Context do
+  @moduledoc """
+  Plug module to add authenticated users to a Plug context for use
+  in authorizing usage.
+  """
+
   @behaviour Plug
   import Plug.Conn
+
+  alias Fumepedia.Accounts
+  alias FumepediaWeb.Authentication
 
   def init(opts) do
     opts
@@ -13,7 +21,7 @@ defmodule FumepediaWeb.Context do
 
   defp build_context(conn) do
     with ["Bearer " <> token] <- get_req_header(conn, "authorization"),
-         {:ok, data} <- FumepediaWeb.Authentication.verify(token),
+         {:ok, data} <- Authentication.verify(token),
          %{} = user <- get_user(data) do
            %{current_user: user}
          end
@@ -22,7 +30,7 @@ defmodule FumepediaWeb.Context do
   end
 
   defp get_user(%{id: id, role: role}) do
-    Fumepedia.Accounts.lookup(role, id)
+    Accounts.lookup(role, id)
   end
 
 end
