@@ -8,7 +8,6 @@ defmodule FumepediaWeb.Context do
 
   def call(conn, _) do
     context = build_context(conn)
-#    IO.inspect [context: context]
     put_private(conn, :absinthe, %{context: context})
   end
 
@@ -21,7 +20,6 @@ defmodule FumepediaWeb.Context do
     else
       _ -> %{}
   end
-
 
   defp get_user(%{id: id, role: role}) do
     Fumepedia.Accounts.lookup(role, id)
