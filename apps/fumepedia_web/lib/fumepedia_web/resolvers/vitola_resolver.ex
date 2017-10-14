@@ -9,9 +9,8 @@ defmodule FumepediaWeb.Resolvers.VitolaResolver do
 
   def find(%{id: id}, _info) do
     case Repo.get(Cigar.Vitola, id) do
-      nil     -> {:error, "Vitola id #{id} not found"}
+      nil -> {:error, "Vitola id #{id} not found"}
       vitola -> {:ok, vitola}
     end
   end
-
 end

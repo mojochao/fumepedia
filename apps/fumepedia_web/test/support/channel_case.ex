@@ -25,13 +25,13 @@ defmodule FumepediaWeb.ChannelCase do
     end
   end
 
-
   setup tags do
     :ok = Ecto.Adapters.SQL.Sandbox.checkout(Fumepedia.Repo)
+
     unless tags[:async] do
       Ecto.Adapters.SQL.Sandbox.mode(Fumepedia.Repo, {:shared, self()})
     end
+
     :ok
   end
-
 end

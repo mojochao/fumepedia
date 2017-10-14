@@ -11,9 +11,9 @@ defmodule FumepediaWeb.Resolvers.Accounts do
       {:ok, user} ->
         token = Authentication.sign(%{type: "employee", id: user.id})
         {:ok, %{token: token, employee: user}}
+
       _ ->
         {:error, "incorrect email or password"}
     end
   end
-
 end

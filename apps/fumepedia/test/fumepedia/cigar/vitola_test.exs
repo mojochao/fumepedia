@@ -17,5 +17,4 @@ defmodule Fumepedia.Cigar.VitolaTest do
     changeset = Vitola.changeset(%Vitola{}, attrs)
     assert changeset.valid?
   end
-
 end

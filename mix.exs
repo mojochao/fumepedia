@@ -4,7 +4,7 @@ defmodule FumepediaUmbrella.Mixfile do
   def project do
     [
       apps_path: "apps",
-      start_permanent: Mix.env == :prod,
+      start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
   end
@@ -12,5 +12,4 @@ defmodule FumepediaUmbrella.Mixfile do
   defp deps do
     []
   end
-
 end

@@ -5,10 +5,10 @@ defmodule Fumepedia.Application do
     import Supervisor.Spec
 
     children = [
-      supervisor(Fumepedia.Repo, []),
+      supervisor(Fumepedia.Repo, [])
     ]
+
     opts = [strategy: :one_for_one, name: Fumepedia.Supervisor]
     Supervisor.start_link(children, opts)
   end
-
 end

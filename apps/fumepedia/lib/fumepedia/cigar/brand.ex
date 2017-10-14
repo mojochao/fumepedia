@@ -6,11 +6,11 @@ defmodule Fumepedia.Cigar.Brand do
   alias Fumepedia.Cigar.{Brand, Line}
 
   schema "brands" do
-    field :added_on, :date
-    field :name, :string
-    field :body, :string
-    field :image, :string
-    has_many :lines, Line
+    field(:added_on, :date)
+    field(:name, :string)
+    field(:body, :string)
+    field(:image, :string)
+    has_many(:lines, Line)
     timestamps()
   end
 
@@ -18,15 +18,14 @@ defmodule Fumepedia.Cigar.Brand do
   def changeset(%Brand{} = brand, attrs) do
     brand
     |> cast(attrs, [
-        :added_on,
-        :name,
-        :body,
-        :image,
-      ])
+         :added_on,
+         :name,
+         :body,
+         :image
+       ])
     |> cast_assoc(:lines)
     |> validate_required([
-        :name
-      ])
+         :name
+       ])
   end
-
 end

@@ -17,5 +17,4 @@ defmodule Fumepedia.Cigar.BrandTest do
     changeset = Brand.changeset(%Brand{}, attrs)
     assert changeset.valid?
   end
-
 end
