@@ -26,6 +26,7 @@ defmodule Fumepedia.Mixfile do
 
   defp deps do
     [
+      {:comeonin_ecto_password, "~> 2.1"},
       {:credo, "~> 0.8", only: [:dev, :test]},
       {:dogma, "~> 0.1.15"},
       {:distillery, "~> 1.5"},

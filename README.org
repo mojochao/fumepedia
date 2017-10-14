@@ -16,7 +16,6 @@ Fumepedia requires the following:
 $ git clone https://github.com/mojochao/fumepedia.git
 $ cd fumepedia
 $ mix deps.get
-$ mix initdb
 $ mix test
 $ mix phx.server
 # open http://localhost:4000/graphiql in browser
@@ -26,8 +25,8 @@ $ mix phx.server
    - [X] Add umbrella app
    - [X] Add fumepedia app providing ecto repo and schemas
    - [X] Add web app supporting graphql queries
-   - [ ] Extend web app to support graphql mutations
-   - [ ] Add user app supporting user authentication/authorization
-   - [ ] Extend web app to support login and authorization checks
+   - [X] Extend web app to support graphql mutations
+   - [X] Extend app and web app to support user authentication/authorization
+   - [ ] Extend graphql api to support login and authorization checks
    - [ ] Add docker deployment
    - [ ] Add admin app for backoffice use
