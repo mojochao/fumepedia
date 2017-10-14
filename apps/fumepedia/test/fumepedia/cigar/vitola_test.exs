@@ -12,4 +12,10 @@ defmodule Fumepedia.Cigar.VitolaTest do
     assert changeset.valid?
   end
 
+  test "changeset is valid if all fields are present" do
+    attrs = %{name: "name", body: "body", image: "image"}
+    changeset = Vitola.changeset(%Vitola{}, attrs)
+    assert changeset.valid?
+  end
+
 end

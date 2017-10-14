@@ -1,12 +1,23 @@
-defmodule FumepediaWeb.Schema.Types do
+defmodule FumepediaWeb.Schema.CigarTypes do
   @moduledoc false
 
   use Absinthe.Schema.Notation
+
+  scalar :decimal do
+    parse fn
+      %{value: value}, _ ->
+        Decimal.parse(value)
+      _, _ -> :error
+    end
+
+    serialize &to_string/1
+  end
 
   object :brand do
     field :id, :id
     field :name, :string
     field :body, :string
+    field :image, :string
     field :lines, list_of(:line)
   end
 
@@ -14,6 +25,7 @@ defmodule FumepediaWeb.Schema.Types do
     field :id, :id
     field :name, :string
     field :body, :string
+    field :image, :string
     field :brand, :brand
     field :vitolas, list_of(:vitola)
   end
@@ -22,8 +34,9 @@ defmodule FumepediaWeb.Schema.Types do
     field :id, :id
     field :name, :string
     field :body, :string
+    field :image, :string
     field :shape, :string
-    field :length, :string
+    field :length, :decimal
     field :gauge, :integer
     field :line, :line
   end

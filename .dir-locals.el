@@ -4,4 +4,3 @@
 ((elixir-mode
   (flycheck-elixir-credo-strict . t)
   (elixir-enable-compilation-checking . t)))
-

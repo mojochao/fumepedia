@@ -8,7 +8,7 @@ defmodule Fumepedia.Cigar do
 
   # Cigar Brands
 
-  alias Fumepedia.Cigar.Brand
+  alias __MODULE__.Brand
 
   @doc """
   Returns the list of brands.
@@ -106,7 +106,7 @@ defmodule Fumepedia.Cigar do
 
   # Cigar Lines
 
-  alias Fumepedia.Cigar.Line
+  alias __MODULE__.Line
 
   @doc """
   Returns the list of lines.
@@ -204,7 +204,7 @@ defmodule Fumepedia.Cigar do
 
   # Cigar Vitolas
 
-  alias Fumepedia.Cigar.Vitola
+  alias __MODULE__.Vitola
 
   @doc """
   Returns the list of vitolas.

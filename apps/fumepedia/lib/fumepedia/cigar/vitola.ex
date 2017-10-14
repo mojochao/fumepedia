@@ -9,6 +9,7 @@ defmodule Fumepedia.Cigar.Vitola do
     field :added_on, :date
     field :name, :string
     field :body, :string
+    field :image, :string
     field :shape, :string
     field :length, :decimal
     field :gauge, :integer
@@ -23,6 +24,7 @@ defmodule Fumepedia.Cigar.Vitola do
         :added_on,
         :name,
         :body,
+        :image,
         :shape,
         :length,
         :gauge,
