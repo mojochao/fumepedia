@@ -62,14 +62,16 @@ don_carlos =
 
 # Users
 
-%User{email: "alice@fumepedia.int",
+%User{}
+|> User.changeset(%{email: "alice@fumepedia.int",
       name: "alice",
       password: "password",
-      role: "admin"}
+      role: "employee"})
 |> Repo.insert!
 
-%User{email: "bob@fumepedia.int",
+%User{}
+|> User.changeset(%{email: "bob@fumepedia.int",
       name: "bob",
       password: "password",
-      role: "user"}
+      role: "user"})
 |> Repo.insert!
